@@ -39,7 +39,7 @@ input[type="text"] {
 
 button {
     padding: 10px;
-    background-color: #0A0A0A;
+    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
@@ -47,5 +47,5 @@ button {
 }
 
 button:hover {
-    background-color: #0A0A0A;
+    background-color: #FFA500;
 }
