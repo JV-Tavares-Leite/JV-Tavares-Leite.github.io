@@ -1,9 +1,4 @@
-let memoria = ""; // Variável para armazenar os valores.
-var teste =document.getElementById("datainput");
-
-function guardarvalor(tes) {
-    console.log(teste);
-    memoria += tes;
-    teste.value = memoria;
-
+let display = document.getElementById("display");
+function adicionarValor(valor) {
+    display.value += valor;
 }
