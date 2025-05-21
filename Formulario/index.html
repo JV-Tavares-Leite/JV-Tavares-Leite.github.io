@@ -4,20 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Formulário</title>
+    <style>
+        div {
+            width: 100%; 
+            margin: 20px;
+        }
+    </style>
+</head>
 <body>
     <h1>Músicas Favoritas</h1>
     <form method="post" action="https://formtester.goodbytes.be/post.php">
-        <label for ="nomeMúsica">nome da Música</label>
-        <input type='text' id="Digite o nomeMusica" name="Digite o nomeMusica" />
-        
-        <label for ="nomeArtista">Nome do Artista</label>
-        <input type='text' id="nomeArtista" name="nomeArtista" />
-        
-        <label> for ="senha">Qual a sua senha</label>
-        <input type='text' id="senha" name="senha" />
+        <fieldset>
+            <label for="nomeMusica">Nome da Música</label>
+            <input type='text' id="nomeMusica" name="nomeMusica" required
+                placeholder="Someone like you"/>
+        </fieldset>
+        <fieldset>
+            <label for="avaliacao">Nota artista</label>
+            
+            <div>
+                <input type='radio' name="avaliacao"  id="avaliacaoOtimo" />
+                <label for="avaliacaoOtimo">Otimo</label>                
+            </div>
 
-        <button type="submit"></button>
+            <label for="avaliacaoMedio">Médio</label>
+            <input type='radio' name="avaliacao" id="avaliacaoMedio" />
+
+            <label for="avaliacaoFraco">Fraco</label>
+            <input type='radio' name="avaliacao" id="avaliacaoFraco" />
+        </fieldset>
+
         
+        <fieldset>
+            <label for="avaliacao">Estilo</label>
+            
+            <div>
+                <input type='radio' name="estilo"  id="estiloRock" />
+                <label for="estiloRock">Rock</label>                
+            </div>
+            <div>
+                <input type='radio' name="estilo" id="estiloPop" />
+                <label for="estiloPop">Pop</label>
+            </div>  
+            <div>
+                <input type='radio' name="estilo" id="estiloSertanejo" />
+                <label for="estiloSertanejo">Sertanejo</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <label >Qualidades</label>
+            <div>
+                <input type='checkbox' name="qualidade[]" id="qualidadeVoz" />
+                <label for="qualidadeVoz">Voz</label>
+            </div>
+            <div>
+                <input type='checkbox' name="qualidade[]" id="qualidadeLetra" />
+                <label for="qualidadeLetra">Letra</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <label >Efeitos na gente</label>
+            <div>
+                <input type='checkbox' name="adjetivosCalma" id="adjetivosCalma" />
+                <label for="adjetivosCalma">Calma</label>
+            </div>
+            <div>
+                <input type='checkbox' name="adjetivosRelaxante" id="adjetivosRelaxante" />
+                <label for="adjetivosRelaxante">Relaxante</label>
+            </div>
+        </fieldset>
+        <div>
+            <label for="nomeArtista">Nome do Artista</label>
+            <input type='text' id="nomeArtista" name="nomeArtista"
+                placeholder="Adele, Anitta, Lady Gaga, Chitãozinho e Xororó" />
+        </div>
+        <div>
+            <label for="senha">Senha do arquivo</label>
+            <input type='password' id="senha" name="senha"
+                placeholder="Coloque uma senha segura" />
+        </div>  
+        <div>
+            <label for="email">E-mail da gravadora</label>
+            <input type='email' id="email" name="email" required
+                placeholder="teste@dominio.com.br" />
+        </div>
+        
+        <div>
+            <label for="anoLancamento">Ano Lançamento</label>
+            <input type='number' id="anoLancamento" name="anoLancamento"
+                min="1900" max="2025" placeholder="1900 a 20XX" />
+        </div>  
+
+        
+        <div>
+            <label for="telefone">Telefone</label>
+            <input type='tel' id="telefone" name="telefone"
+                placeholder="(62) 99999-9999" />
+        </div>   
+
+        
+        <div>
+            <label for="url">URL / Link</label>
+            <input type='url' id="url" name="url"
+                placeholder="https://meusite.com.br" />
+        </div>  
+        
+        <div>
+            <label for="dataLancamento">Data de Lançamento</label>
+            <input type='date' id="url" name="dataLancamento" />
+        </div>   
+        
+        <div>
+            <label for="mes">Mês</label>
+            <input type='month' id="mes" name="mes" />
+        </div>           
+        <div>
+            <label for="semana">Semana</label>
+            <input type='week' id="semana" name="semana" />
+        </div>           
+        <div>
+            <label for="hora">Hora</label>
+            <input type='time' id="hora" name="hora" required />
+        </div>          
+        <div>
+            <input type='hidden' id="usuarioLogado" name="usuarioLogado" 
+                value="khyquer" />
+        </div>   
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+
     </form>
 </body>
 </html>
